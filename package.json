@@ -1,0 +1,24 @@
+{
+  "name": "ejercicios-vuejs",
+  "version": "1.0.0",
+  "description": "Ejercicios de practica sobre el libro **La elegancia de Vue.js 2**",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soycamis/ejercicios-vuejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soycamis/ejercicios-vuejs/issues"
+  },
+  "homepage": "https://github.com/soycamis/ejercicios-vuejs#readme"
+}
