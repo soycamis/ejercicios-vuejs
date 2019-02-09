@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Directiva v-show</title>
+</head>
+<body>
+
+  <p>Las directivas siempre actuan sobre un elemento o bloque de elementos html</p>
+  <p>La directiva v-show, muestra u oculta ciertos elementos dependiendo de si la variable o propiedad de $data esta presente. Con <strong>v-show</strong> los elementos siempre se renderizan ya que solo les aplica un <i>display de CSS.</i></p>
+  
+  <p>El siguiente ejemplo, muestra el uso de v-show. Asi que cuando el textarea tenga un mensaje se mostrara un boton, pero cuando este vacio. mostrara una advertencia de que tenemos que escribir un mensaje.</p>
+
+  <div id="app">
+    <h1 v-show="!messageHelp">Debes enviar un mensaje de ayuda!</h1>
+    <hr>
+    <textarea v-model="messageHelp"></textarea><br>
+    <button v-show="messageHelp">Enviar mensaje!</button>
+  </div>
+
+  <script src="./node_modules/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        messageHelp: ""
+      }
+    });
+  </script>
+  
+</body>
+</html>
