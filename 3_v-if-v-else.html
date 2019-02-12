@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Directiva v-if - v-else</title>
+</head>
+<body>
+
+  <p>La directiva v-if funciona muy parecido a v-show, solo que esta directiva no renderiza el elemento al que se le aplica, v-show lo renderiza pero lo esconde con un <code>display: none</code>.</p>
+
+  <p>v-if cuanta con su contraparte el v-else para cuando el valor es falso, este debe ir inmediatemente despues del v-if para que funcione.</p>
+
+  <div id="app">
+    <h1 v-if="!message">Debes enviar un mensaje de ayuda!</h1>
+    <h2 v-else>Listo! el mensaje ya esta, ahora envialo!</h2>
+
+    <textarea v-model="message"></textarea>
+    <button v-if="message">Enviar mensaje ya!</button>
+  </div>
+
+  <script src="./node_modules/vue/dist/vue.js"></script>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        message: ""
+      }
+    });
+  </script>
+  
+</body>
+</html>
