@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicio 1</title>
+</head>
+<body>
+
+  <h3>Ejercicio:</h3>
+  <p>El usuario ingresara su genero junto con su nombre. Si el usuario es hombre, entonces en el encabezado se saludara al uaurio con "Hola, Sr. {{ nombre }}</p>
+  <p>Si el usuario es mujer, "Hola Sra. {{ nombre }}</p>
+  <p>Si no es ninguno de los anteriores, "Asi que no puedes decidir, Bien!"</p>
+
+  <div id="app">
+    <div v-if="gender ==='hombre' || gender ==='mujer'">
+      <h1>Hola,
+      <span v-show="gender === 'hombre'">Sr. {{ name }}</span>
+      <span v-show="gender === 'mujer'">Sra. {{ name }}</span>
+      </h1>
+    </div>
+    <h1 v-else>Asi que no puedes decidir, Bien!</h1>
+    <hr>
+    <p>
+      <label for="genero">Cual es tu genero:</label>
+      <input type="text" id="genero" v-model="gender">
+    </p>
+
+    <p>
+      <label for="nombre">Tu nombre:</label>
+      <input type="text" id="nombre" v-model="name">
+    </p>
+  </div>
+
+  <script src="./node_modules/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        name: "Desconocido",
+        gender: "hombre"
+      }
+    });
+  </script>
+  
+</body>
+</html>
